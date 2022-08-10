@@ -4,7 +4,7 @@ db_user=user_name
 db_host=hostname
 backupfolder=~/DBBackUps
 # Сколько дней хранить файлы
-keep_day=30
+keep_days=30
 sqlfile=$backupfolder/$db_name-$(date +%y.%m.%d-%H:%M:%S).sql
 mkdir -p $backupfolder
 
@@ -15,4 +15,4 @@ else
    exit
 fi
 
-find $backupfolder -mtime +$keep_day -delete
+find $backupfolder -mtime +$keep_days -delete
